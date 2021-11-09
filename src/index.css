@@ -41,8 +41,65 @@ button.selected {
   font-size: 15px;
   margin: 5px 0;
   padding: 3px 10px;
+  margin-right: 5px;
 }
 
 input {
   font-size: 20px;
+}
+
+.help {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  font-size: 14px;
+  overflow-y: scroll;
+  background: rgb(87, 87, 87);
+  color: #f8f8f8;
+}
+
+.help table td, .help table th {
+  white-space: pre;
+  border: 1px solid;
+  padding: 5px;
+}
+
+.help table {
+  border: 1px solid;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+.help-table {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.help-table .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  right: 0;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.help-table:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

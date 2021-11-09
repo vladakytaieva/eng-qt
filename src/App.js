@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
-import words from "./db"
+import {words} from "./db"
+import Qt from "./Qt"
 
 function App() {
     const [mode, setMode] = useState('eng')
@@ -25,7 +26,7 @@ function App() {
             setWord(w.qt)
             setCorrect(w.eng)
         }
-        setTotal(total + 1)
+        
     }
 
     const checkAnswer = (e) => {
@@ -35,6 +36,7 @@ function App() {
             setScore(score + 1)
         }
         setAnswer('')
+        setTotal(total + 1)
         selectWord()
     }
     
@@ -63,6 +65,7 @@ function App() {
                 <button disabled={!answer} className="submit">Submit</button>
             </form>
             <p>Score: {score}/{total}</p>
+            <Qt/>
         </div>
     )
 }
